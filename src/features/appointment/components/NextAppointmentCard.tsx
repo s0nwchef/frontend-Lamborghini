@@ -1,5 +1,6 @@
+import { Button } from '../../../components/ui/Button'
+import { Eyebrow } from '../../../components/ui/Eyebrow'
 import type { Appointment } from '../types'
-import { AppointmentActionButton } from './AppointmentActionButton'
 import { AppointmentStatusBadge } from './AppointmentStatusBadge'
 
 interface NextAppointmentCardProps {
@@ -10,9 +11,7 @@ export function NextAppointmentCard({ appointment }: NextAppointmentCardProps) {
     return (
         <section data-node-id="226:5757" className="border border-lambo-pressed bg-lambo-tertiary p-6">
             <div className="flex items-start justify-between gap-4">
-                <div className="font-barlow text-xs font-semibold uppercase tracking-[0.08em] text-lambo-primary">
-                    Lịch hẹn tiếp theo
-                </div>
+                <Eyebrow>Lịch hẹn tiếp theo</Eyebrow>
                 <AppointmentStatusBadge status={appointment.status} />
             </div>
 
@@ -26,8 +25,8 @@ export function NextAppointmentCard({ appointment }: NextAppointmentCardProps) {
             <div className="mt-6 flex flex-wrap items-end justify-between gap-4">
                 <p className="text-base text-lambo-hover">{appointment.venue}</p>
                 <div className="flex flex-wrap gap-3">
-                    <AppointmentActionButton>Đổi lịch</AppointmentActionButton>
-                    <AppointmentActionButton>Hủy lịch</AppointmentActionButton>
+                    <Button variant="light">Đổi lịch</Button>
+                    <Button variant="light">Hủy lịch</Button>
                 </div>
             </div>
         </section>

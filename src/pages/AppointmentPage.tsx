@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { CalendarDays } from 'lucide-react'
 import ScrollToTop from '../components/ScrollToTop'
+import { Button } from '../components/ui/Button'
 import { APPOINTMENT_TABS, SAMPLE_APPOINTMENTS } from '../features/appointment/data'
 import { useMyAppointments } from '../features/appointment/hooks'
 import { AppointmentHeader } from '../features/appointment/components/AppointmentHeader'
@@ -44,13 +45,9 @@ export default function AppointmentPage() {
 
                 <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <AppointmentTabs activeTab={activeTab} counts={counts} onChange={setActiveTab} />
-                    <button
-                        type="button"
-                        className="inline-flex h-10 shrink-0 cursor-pointer items-center gap-3 bg-lambo-primary px-5 font-barlow text-xs font-bold uppercase tracking-[0.18em] text-lambo-bold-black transition-colors hover:bg-lambo-hover active:bg-lambo-pressed"
-                    >
-                        <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                        <span>Đặt lịch hẹn</span>
-                    </button>
+                    <Button variant="primary" icon={<CalendarDays className="h-4 w-4" />} iconPosition="left">
+                        Đặt lịch hẹn
+                    </Button>
                 </div>
 
                 {isLoading && (

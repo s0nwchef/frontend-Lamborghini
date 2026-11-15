@@ -1,5 +1,5 @@
+import { Button } from '../../../components/ui/Button'
 import type { Appointment } from '../types'
-import { AppointmentActionButton } from './AppointmentActionButton'
 import { AppointmentStatusBadge } from './AppointmentStatusBadge'
 
 interface AppointmentListItemProps {
@@ -21,7 +21,7 @@ export function AppointmentListItem({ appointment }: AppointmentListItemProps) {
             </div>
 
             <AppointmentStatusBadge status={appointment.status} />
-            <AppointmentActionButton>Xem chi tiết</AppointmentActionButton>
+            <Button variant="light">Xem chi tiết</Button>
         </article>
     )
 }
