@@ -14,6 +14,7 @@ import ContactPage from "./pages/ContactPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import NewsPage from "./pages/NewsPage.tsx";
 import AppointmentPage from "./pages/AppointmentPage.tsx";
+import ProfilePage from "./pages/ProfilePage.tsx";
 
 function App() {
     const location = useLocation()
@@ -46,6 +47,7 @@ function App() {
                     <Route path="/news/:slug" element={<NewsPage />} />
                     <Route path="/newsroom" element={<NewsPage />} />
                     <Route path="/appointments" element={<AppointmentPage />} />
+                    <Route path="/profile" element={<ProfilePage />} />
                 </Routes>
             </main>
             <Footer />
