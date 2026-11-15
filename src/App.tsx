@@ -15,6 +15,7 @@ import SearchPage from "./pages/SearchPage.tsx";
 import NewsPage from "./pages/NewsPage.tsx";
 import AppointmentPage from "./pages/AppointmentPage.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
+import SavedConfigurationsPage from "./pages/SavedConfigurationsPage.tsx";
 
 function App() {
     const location = useLocation()
@@ -48,6 +49,7 @@ function App() {
                     <Route path="/newsroom" element={<NewsPage />} />
                     <Route path="/appointments" element={<AppointmentPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/saved-configurations" element={<SavedConfigurationsPage />} />
                 </Routes>
             </main>
             <Footer />
