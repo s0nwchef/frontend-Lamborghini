@@ -51,7 +51,7 @@ function App() {
                     <Route path="/appointments" element={<AppointmentPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/saved-configurations" element={<SavedConfigurationsPage />} />
-                    <Route path="/configuration-export" element={<ConfigurationExportPage />} />
+                    <Route path="/profile/configuration-export" element={<ConfigurationExportPage />} />
                 </Routes>
             </main>
             <Footer />
