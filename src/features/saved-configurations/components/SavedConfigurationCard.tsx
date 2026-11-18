@@ -68,6 +68,8 @@ export function SavedConfigurationCard({ configuration }: SavedConfigurationCard
 
             <div className="mt-11 flex gap-6">
                 <Button
+                    as="link"
+                    to="/profile/configuration-export"
                     variant="light"
                     className="flex-1 justify-center"
                     icon={<Download className="h-4 w-4" />}
