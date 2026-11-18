@@ -16,6 +16,7 @@ import NewsPage from "./pages/NewsPage.tsx";
 import AppointmentPage from "./pages/AppointmentPage.tsx";
 import ProfilePage from "./pages/ProfilePage.tsx";
 import SavedConfigurationsPage from "./pages/SavedConfigurationsPage.tsx";
+import ConfigurationExportPage from "./pages/ConfigurationExportPage.tsx";
 
 function App() {
     const location = useLocation()
@@ -50,6 +51,7 @@ function App() {
                     <Route path="/appointments" element={<AppointmentPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/saved-configurations" element={<SavedConfigurationsPage />} />
+                    <Route path="/configuration-export" element={<ConfigurationExportPage />} />
                 </Routes>
             </main>
             <Footer />
