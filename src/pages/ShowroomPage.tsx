@@ -20,7 +20,7 @@ import { ShowroomBoxMap } from '../features/showroom/components/ShowroomBoxMap';
 import { LocationCard } from '../features/showroom/components/LocationCard';
 import { useShowroom } from '../features/showroom/hooks';
 import { adaptShowroomToUI } from '../features/showroom/types';
-import ScrollToTop from '../components/ScrollToTop';
+import { ScrollToTop } from '../components/feedback';
 
 export default function ShowroomPage() {
   // API hook
@@ -656,7 +656,7 @@ export default function ShowroomPage() {
           8. SHOWROOM DETAILS MODAL
           ========================================================================= */}
       {detailsModalOpen && detailShowroom && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
           <div className="relative w-full max-w-lg bg-[#0e0d0b] border border-[#383020] p-6 sm:p-8">
             <div className="flex items-center justify-between pb-4 border-b border-[#242017] mb-6">
               <div>
