@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Button } from '../../../../../components/ui/Button'
 
 interface DealerAppointmentPaginationProps {
     currentPage: number
@@ -19,11 +20,6 @@ export function DealerAppointmentPagination({
     const end = Math.min(currentPage * pageSize, total)
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
 
-    const pageButtonClass = (active: boolean) =>
-        `flex h-10 w-10 items-center justify-center font-barlow text-sm font-semibold transition-colors ${
-            active ? 'bg-lambo-primary text-black' : 'bg-lambo-tertiary text-lambo-secondary hover:bg-lambo-pressed'
-        }`
-
     return (
         <div className="mt-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="font-barlow text-sm text-lambo-hover">
@@ -31,35 +27,34 @@ export function DealerAppointmentPagination({
             </p>
 
             <nav aria-label="Phân trang" className="flex items-center gap-2">
-                <button
-                    type="button"
-                    onClick={() => onPageChange(currentPage - 1)}
-                    disabled={currentPage <= 1}
+                <Button
+                    variant="secondary"
                     aria-label="Trang trước"
-                    className="flex h-10 w-10 items-center justify-center text-lambo-primary transition-colors hover:text-lambo-hover disabled:opacity-30"
+                    disabled={currentPage <= 1}
+                    onClick={() => onPageChange(currentPage - 1)}
+                    className="h-10 w-10 justify-center px-0"
                 >
                     <ChevronLeft className="h-4 w-4" />
-                </button>
+                </Button>
                 {pages.map((page) => (
-                    <button
+                    <Button
                         key={page}
-                        type="button"
+                        variant={page === currentPage ? 'primary' : 'secondary'}
                         onClick={() => onPageChange(page)}
-                        aria-current={page === currentPage ? 'page' : undefined}
-                        className={pageButtonClass(page === currentPage)}
+                        className="h-10 w-10 justify-center px-0"
                     >
                         {page}
-                    </button>
+                    </Button>
                 ))}
-                <button
-                    type="button"
-                    onClick={() => onPageChange(currentPage + 1)}
-                    disabled={currentPage >= totalPages}
+                <Button
+                    variant="secondary"
                     aria-label="Trang sau"
-                    className="flex h-10 w-10 items-center justify-center text-lambo-primary transition-colors hover:text-lambo-hover disabled:opacity-30"
+                    disabled={currentPage >= totalPages}
+                    onClick={() => onPageChange(currentPage + 1)}
+                    className="h-10 w-10 justify-center px-0"
                 >
                     <ChevronRight className="h-4 w-4" />
-                </button>
+                </Button>
             </nav>
         </div>
     )

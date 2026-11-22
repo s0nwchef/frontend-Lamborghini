@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react'
-import { ScrollToTop } from '../../../components/feedback'
-import { SAMPLE_DEALER_APPOINTMENTS } from '../../../features/profile/dealer/data'
-import { useDealerAppointments } from '../../../features/profile/dealer/hooks'
-import { DealerAppointmentHeader } from '../../../features/profile/dealer/components/DealerAppointmentHeader'
-import { DealerAppointmentPagination } from '../../../features/profile/dealer/components/DealerAppointmentPagination'
-import { DealerAppointmentRow } from '../../../features/profile/dealer/components/DealerAppointmentRow'
-import { DealerAppointmentToolbar } from '../../../features/profile/dealer/components/DealerAppointmentToolbar'
-import { DealerMetricCard } from '../../../features/profile/dealer/components/DealerMetricCard'
-import type { DealerStatusFilter } from '../../../features/profile/dealer/types'
+import { ScrollToTop } from '../../../../components/feedback'
+import { SAMPLE_DEALER_APPOINTMENTS } from '../../../../features/profile/dealer/appointment/data'
+import { useDealerAppointments } from '../../../../features/profile/dealer/appointment/hooks'
+import { DealerAppointmentHeader } from '../../../../features/profile/dealer/appointment/components/DealerAppointmentHeader'
+import { DealerAppointmentPagination } from '../../../../features/profile/dealer/appointment/components/DealerAppointmentPagination'
+import { DealerAppointmentRow } from '../../../../features/profile/dealer/appointment/components/DealerAppointmentRow'
+import { DealerAppointmentToolbar } from '../../../../features/profile/dealer/appointment/components/DealerAppointmentToolbar'
+import { DealerMetricCard } from '../../../../features/profile/dealer/appointment/components/DealerMetricCard'
+import type { DealerStatusFilter } from '../../../../features/profile/dealer/appointment/types'
 
 const PAGE_SIZE = 5
 

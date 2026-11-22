@@ -1,5 +1,6 @@
-import { Button } from '../../../../components/ui/Button'
-import { AppointmentStatusBadge } from '../../appointment/components/AppointmentStatusBadge'
+import { useNavigate } from 'react-router-dom'
+import { Button } from '../../../../../components/ui/Button'
+import { AppointmentStatusBadge } from '../../../appointment/components/AppointmentStatusBadge'
 import { formatDealerSchedule, type DealerAppointmentDTO } from '../types'
 
 interface DealerAppointmentRowProps {
@@ -8,6 +9,7 @@ interface DealerAppointmentRowProps {
 }
 
 export function DealerAppointmentRow({ appointment, striped }: DealerAppointmentRowProps) {
+    const navigate = useNavigate()
     const isPending = appointment.trangThai === 'CHO_XAC_NHAN'
 
     return (
@@ -30,7 +32,11 @@ export function DealerAppointmentRow({ appointment, striped }: DealerAppointment
             </div>
 
             <div className="flex flex-wrap gap-2">
-                <Button variant="light" className="h-10 px-4 text-[11px]">
+                <Button
+                    variant="light"
+                    className="h-10 px-4 text-[11px]"
+                    onClick={() => navigate(`/profile/dealer/appointment/${appointment.maLichHen}`)}
+                >
                     Chi tiết
                 </Button>
                 {isPending ? (

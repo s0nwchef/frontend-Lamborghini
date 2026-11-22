@@ -17,6 +17,7 @@ import {
     SavedConfigurationsPage,
     ConfigurationExportPage,
     DealerAppointmentsPage,
+    DealerAppointmentDetailPage,
 } from './pages/profile'
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                     <Route path="/profile/user/saved-configurations" element={<SavedConfigurationsPage />} />
                     <Route path="/profile/user/configuration-export" element={<ConfigurationExportPage />} />
                     <Route path="/profile/dealer" element={<DealerAppointmentsPage />} />
+                    <Route path="/profile/dealer/appointment/:id" element={<DealerAppointmentDetailPage />} />
                 </Routes>
             </main>
             <Footer />
