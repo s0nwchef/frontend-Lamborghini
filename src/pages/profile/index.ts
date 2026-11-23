@@ -6,3 +6,4 @@ export { default as DealerAppointmentsPage } from './dealer/appointment/DealerAp
 export { default as DealerAppointmentDetailPage } from './dealer/appointmentDetail/DealerAppointmentDetailPage'
 export { default as MyCustomerPage } from './dealer/my-customer/MyCustomerPage'
 export { default as DealerInformationPage } from './dealer/information/DealerInformationPage'
+export { default as DealerAppointmentRefusePage } from './dealer/appointmentRefuse/DealerAppointmentRefusePage'
