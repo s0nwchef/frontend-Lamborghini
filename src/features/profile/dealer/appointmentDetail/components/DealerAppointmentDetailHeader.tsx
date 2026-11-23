@@ -1,6 +1,6 @@
 import { Eyebrow } from '../../../../../components/ui/Eyebrow'
 import { SectionHeading } from '../../../../../components/ui/SectionHeading'
-import { AppointmentStatusBadge } from '../../../appointment/components/AppointmentStatusBadge'
+import { AppointmentStatusBadge } from '../../../user/appointment/components/AppointmentStatusBadge'
 import { formatReceivedDate, type DealerAppointmentDetailDTO } from '../types'
 
 interface DealerAppointmentDetailHeaderProps {

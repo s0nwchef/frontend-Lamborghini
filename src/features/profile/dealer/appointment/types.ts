@@ -1,4 +1,4 @@
-import type { AppointmentStatus } from '../../appointment/types'
+import type { AppointmentStatus } from '../../user/appointment/types'
 
 export type DealerStatusFilter = 'ALL' | 'CHO_XAC_NHAN' | 'DA_XAC_NHAN'
 

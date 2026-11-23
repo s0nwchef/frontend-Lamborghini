@@ -1,4 +1,4 @@
-import type { AppointmentStatus } from '../../appointment/types'
+import type { AppointmentStatus } from '../../user/appointment/types'
 
 export interface DealerAppointmentDetailDTO {
     maLichHen: number
