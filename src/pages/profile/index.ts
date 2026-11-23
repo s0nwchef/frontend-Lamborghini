@@ -5,3 +5,4 @@ export { default as ConfigurationExportPage } from './configuration-export/Confi
 export { default as DealerAppointmentsPage } from './dealer/appointment/DealerAppointmentsPage'
 export { default as DealerAppointmentDetailPage } from './dealer/appointmentDetail/DealerAppointmentDetailPage'
 export { default as MyCustomerPage } from './dealer/my-customer/MyCustomerPage'
+export { default as DealerInformationPage } from './dealer/information/DealerInformationPage'

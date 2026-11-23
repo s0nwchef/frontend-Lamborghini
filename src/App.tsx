@@ -19,6 +19,7 @@ import {
     DealerAppointmentsPage,
     DealerAppointmentDetailPage,
     MyCustomerPage,
+    DealerInformationPage,
 } from './pages/profile'
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/profile/dealer/appointment" element={<DealerAppointmentsPage />} />
                     <Route path="/profile/dealer/appointment/:id" element={<DealerAppointmentDetailPage />} />
                     <Route path="/profile/dealer/my-customer" element={<MyCustomerPage />} />
+                    <Route path="/profile/dealer/information" element={<DealerInformationPage />} />
                 </Routes>
             </main>
             <Footer />
