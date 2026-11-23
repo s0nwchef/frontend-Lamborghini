@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Button } from '../../../../../components/ui/Button'
-import { AppointmentStatusBadge } from '../../../appointment/components/AppointmentStatusBadge'
+import { AppointmentStatusBadge } from '../../../user/appointment/components/AppointmentStatusBadge'
 import { formatDealerSchedule, type DealerAppointmentDTO } from '../types'
 
 interface DealerAppointmentRowProps {
